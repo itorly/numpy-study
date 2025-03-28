@@ -1,5 +1,7 @@
-# # An example
+# # 1.An example
 # Import the numpy library for numerical operations
+import sys
+
 import numpy as np
 
 # Create a 1D array with values from 0 to 14 and reshape it into a 3x5 matrix
@@ -21,7 +23,7 @@ print('a.dtype.itemsize =', a.itemsize)
 # Print the total number of elements in the array 'a'
 print('a.size =', a.size)
 
-# Array creation
+# # 2.Array creation
 # Import the numpy library and alias it as 'np' for convenience
 import numpy as np
 
@@ -76,3 +78,20 @@ print('x =', x)
 # Compute the sine of each element in the array x
 f = np.sin(x)
 print('f =', f)
+
+
+
+# # 3.Printing arrays
+a = np.arange(6)                    # 1d array
+print(a)
+b = np.arange(12).reshape(4, 3)     # 2d array
+print(b)
+c = np.arange(24).reshape(2, 3, 4)  # 3d array
+print(c)
+
+# If an array is too large to be printed, NumPy automatically skips the central part of the array and only prints the corners
+print(np.arange(10000))
+print(np.arange(10000).reshape(100, 100))
+# To disable this behaviour and force NumPy to print the entire array, you can change the printing options using set_printoptions.
+np.set_printoptions(threshold=sys.maxsize)  # sys module should be imported
+

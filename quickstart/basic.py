@@ -126,3 +126,20 @@ B = np.array([[2, 0],
 print('A * B =\n', A * B)
 print('A @ B =\n', A @ B)
 print('A.dot(B) =\n', A.dot(B))
+
+# 4.3 += and *=, modify an existing array rather than create
+# Some operations, such as += and *=, act in place to modify an existing array rather than create a new one.
+rg = np.random.default_rng(1)  # create instance of default random number generator
+print('rg =', rg)
+a = np.ones((2, 3), dtype=int)
+print('a =', a)
+b = rg.random((2, 3))
+print('b =', b)
+
+a *= 3
+print('After a *= 3, a=\n', a)
+b += a
+print('After b += a, b=\n', b)
+# a += b  # b is not automatically converted to integer type
+# numpy._core._exceptions._UFuncOutputCastingError
+# print('After a += b, a=\n', a)

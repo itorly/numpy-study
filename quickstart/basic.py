@@ -95,3 +95,20 @@ print(np.arange(10000).reshape(100, 100))
 # To disable this behaviour and force NumPy to print the entire array, you can change the printing options using set_printoptions.
 np.set_printoptions(threshold=sys.maxsize)  # sys module should be imported
 
+
+# # 4.Basic operations
+# 4.1 Arithmetic operators
+# Arithmetic operators on arrays apply elementwise.
+print('\n## 4.Basic operations')
+a = np.array([20, 30, 40, 50])
+print('a =', a)
+b = np.arange(4)
+print('b =', b)
+c = a - b
+print('c =', c)
+# b**2
+print('b**2 =', b ** 2)
+# 10 * np.sin(a)
+print('10 * np.sin(a) =', 10 * np.sin(a))
+# a < 35
+print('a < 35 =', a < 35)

@@ -166,3 +166,15 @@ print('c.dtype.name =', c.dtype.name)
 d = np.exp(c * 1j)
 print('After d = np.exp(c * 1j), d =', d)
 print('d.dtype.name =', d.dtype.name)
+
+# 4.5 ndarray
+# Many unary operations, such as computing the sum of all the elements in the array
+a = rg.random((2, 3))
+print('a =', a)
+# a.sum()
+# a.min()
+# a.max()
+print('a.sum() =', a.sum())
+print('a.min() =', a.min())
+print('a.max() =', a.max())
+

@@ -97,9 +97,11 @@ np.set_printoptions(threshold=sys.maxsize)  # sys module should be imported
 
 
 # # 4.Basic operations
-# 4.1 Arithmetic operators
-# Arithmetic operators on arrays apply elementwise.
 print('\n## 4.Basic operations')
+# 4.1 Arithmetic operators
+print('\n# 4.1 Arithmetic operators')
+# Arithmetic operators on arrays apply elementwise.
+
 a = np.array([20, 30, 40, 50])
 print('a =', a)
 b = np.arange(4)
@@ -114,8 +116,10 @@ print('10 * np.sin(a) =', 10 * np.sin(a))
 print('a < 35 =', a < 35)
 
 # 4.2 elementwise product, matrix product
+print('\n# 4.2 elementwise product, matrix product')
 # the product operator * operates elementwise in NumPy arrays.
 # The matrix product can be performed using the @ operator (in python >=3.5) or the dot function or method
+
 A = np.array([[1, 1],
               [0, 1]])
 B = np.array([[2, 0],
@@ -128,6 +132,7 @@ print('A @ B =\n', A @ B)
 print('A.dot(B) =\n', A.dot(B))
 
 # 4.3 += and *=, modify an existing array rather than create
+print('\n# 4.3 += and *=, modify an existing array rather than create')
 # Some operations, such as += and *=, act in place to modify an existing array rather than create a new one.
 rg = np.random.default_rng(1)  # create instance of default random number generator
 print('rg =', rg)
@@ -143,3 +148,21 @@ print('After b += a, b=\n', b)
 # a += b  # b is not automatically converted to integer type
 # numpy._core._exceptions._UFuncOutputCastingError
 # print('After a += b, a=\n', a)
+
+# 4.4 upcasting
+print('\n# 4.4 upcasting')
+# When operating with arrays of different types, the type of the resulting array corresponds to the more general or precise one (a behavior known as upcasting).
+a = np.ones(3, dtype=np.int32)
+print('a =', a)
+
+b = np.linspace(0, pi, 3)
+print('b =', b)
+print('b.dtype.name =', b.dtype.name)
+
+c = a + b
+print('After c = a + b, c =', c)
+print('c.dtype.name =', c.dtype.name)
+
+d = np.exp(c * 1j)
+print('After d = np.exp(c * 1j), d =', d)
+print('d.dtype.name =', d.dtype.name)

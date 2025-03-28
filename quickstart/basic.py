@@ -168,13 +168,26 @@ print('After d = np.exp(c * 1j), d =', d)
 print('d.dtype.name =', d.dtype.name)
 
 # 4.5 ndarray
+print('\n# 4.5 ndarray')
 # Many unary operations, such as computing the sum of all the elements in the array
 a = rg.random((2, 3))
 print('a =', a)
-# a.sum()
-# a.min()
-# a.max()
+
 print('a.sum() =', a.sum())
 print('a.min() =', a.min())
 print('a.max() =', a.max())
 
+# 4.6 an operation along the specified axis of an array
+print('\n# 4.6 an operation along the specified axis of an array')
+# apply an operation along the specified axis of an array by specifying the axis parameter
+b = np.arange(12).reshape(3, 4)
+print('b =', b)
+
+# sum of each column
+print('b.sum(axis=0) =', b.sum(axis=0))
+# sum of each row
+print('b.sum(axis=1) =', b.sum(axis=1))
+# min of each row
+print('b.min(axis=1) =', b.min(axis=1))
+# cumulative sum along each row
+print('b.cumsum(axis=1) =\n', b.cumsum(axis=1))

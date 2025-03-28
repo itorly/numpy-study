@@ -112,3 +112,17 @@ print('b**2 =', b ** 2)
 print('10 * np.sin(a) =', 10 * np.sin(a))
 # a < 35
 print('a < 35 =', a < 35)
+
+# 4.2 elementwise product, matrix product
+# the product operator * operates elementwise in NumPy arrays.
+# The matrix product can be performed using the @ operator (in python >=3.5) or the dot function or method
+A = np.array([[1, 1],
+              [0, 1]])
+B = np.array([[2, 0],
+              [3, 4]])
+# A * B     # elementwise product
+# A @ B     # matrix product
+# A.dot(B)  # another matrix product
+print('A * B =\n', A * B)
+print('A @ B =\n', A @ B)
+print('A.dot(B) =\n', A.dot(B))

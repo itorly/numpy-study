@@ -191,3 +191,17 @@ print('b.sum(axis=1) =', b.sum(axis=1))
 print('b.min(axis=1) =', b.min(axis=1))
 # cumulative sum along each row
 print('b.cumsum(axis=1) =\n', b.cumsum(axis=1))
+
+# # 5.Universal functions
+print('\n## 5.Universal functions')
+B = np.arange(3)
+print('B =', B)
+# np.exp(B)
+print('np.exp(B) =', np.exp(B))
+# np.sqrt(B)
+print('np.sqrt(B) =', np.sqrt(B))
+# C = np.array([2., -1., 4.])
+C = np.array([2., -1., 4.])
+# np.add(B, C)
+print('np.add(B, C) =', np.add(B, C))
+

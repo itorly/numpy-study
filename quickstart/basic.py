@@ -269,3 +269,8 @@ print('c.shape =', c.shape)
 print('c[1, ...] =\n', c[1, ...])
 # c[..., 2]  # same as c[:, :, 2]
 print('c[..., 2] =\n', c[..., 2])
+
+# However, if one wants to perform an operation on each element in the array, one can use the flat attribute which is an iterator over all the elements of the array
+print('an iterator over all the elements of the array')
+for element in b.flat:
+    print(element)

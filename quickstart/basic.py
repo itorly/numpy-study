@@ -204,4 +204,24 @@ print('np.sqrt(B) =', np.sqrt(B))
 C = np.array([2., -1., 4.])
 # np.add(B, C)
 print('np.add(B, C) =', np.add(B, C))
+# all, any, apply_along_axis, argmax, argmin, argsort, average, bincount, ceil, clip, conj, corrcoef, cov, cross, cumprod, cumsum, diff, dot, floor, inner, invert, lexsort, max, maximum, mean, median, min, minimum, nonzero, outer, prod, re, round, sort, std, sum, trace, transpose, var, vdot, vectorize, where
 
+# # 6.Indexing, slicing and iterating
+print('\n## 6.Indexing, slicing and iterating')
+# 6.1 One-dimensional
+print('\n## 6.1 One-dimensional')
+a = np.arange(10)**3
+print('a =', a)
+# a[2]
+print('a[2] =', a[2])
+# a[2:5]
+print('a[2:5] =', a[2:5])
+
+# equivalent to a[0:6:2] = 1000;
+# from start to position 6, exclusive, set every 2nd element to 1000
+a[:6:2] = 1000
+print('a =', a)
+# a[::-1]  # reversed a
+print('a[::-1] =', a[::-1])
+for i in a:
+    print(i**(1 / 3.))

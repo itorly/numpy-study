@@ -76,3 +76,13 @@ print('np.hstack((a[:, newaxis], b[:, newaxis])) =\n', np.hstack((a[:, newaxis],
 # In complex cases, r_ and c_ are useful for creating arrays by stacking numbers along one axis. They allow the use of range literals
 print('np.r_[0:4, 5, 6] =\n', np.r_[0:4, 5, 6])
 print('np.r_[1:4, 0, 4] =\n', np.r_[1:4, 0, 4])
+
+# _c
+import numpy as np
+# np.c_[np.array([1,2,3]), np.array([4,5,6])]
+print('np.c_[np.array([1,2,3]), np.array([4,5,6])] =\n', np.c_[np.array([1,2,3]), np.array([4,5,6])])
+# np.c_[np.array([[1,2,3]]), 0, 0, np.array([[4,5,6]])]
+print('np.c_[np.array([[1,2,3]]), 0, 0, np.array([[4,5,6]])] =\n', np.c_[np.array([[1,2,3]]), 0, 0, np.array([[4,5,6]])])
+
+
+

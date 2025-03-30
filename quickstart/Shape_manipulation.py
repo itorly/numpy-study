@@ -85,4 +85,34 @@ print('np.c_[np.array([1,2,3]), np.array([4,5,6])] =\n', np.c_[np.array([1,2,3])
 print('np.c_[np.array([[1,2,3]]), 0, 0, np.array([[4,5,6]])] =\n', np.c_[np.array([[1,2,3]]), 0, 0, np.array([[4,5,6]])])
 
 
+# 2.3 Splitting one array into several smaller ones
+print('\n### 2.3 Splitting one array into several smaller ones')
 
+a = np.floor(10 * rg.random((2, 12)))
+print('a =\n', a)
+# Split `a` into 3
+# np.hsplit(a, 3)
+print('np.hsplit(a, 3) =\n', np.hsplit(a, 3))
+# Split `a` after the third and the fourth column
+# np.hsplit(a, (3, 4))
+print('np.hsplit(a, (3, 4)) =\n', np.hsplit(a, (3, 4)))
+
+
+# vsplit
+print('np.vsplit(a, 2) =\n', np.vsplit(a, 2))
+
+x = np.arange(16.0).reshape(4, 4)
+print('x =\n', x)
+
+# np.vsplit(x, np.array([3, 6]))
+print('np.vsplit(x, np.array([3, 6])) =\n', np.vsplit(x, np.array([3, 6])))
+
+# array_split
+import numpy as np
+x = np.arange(8.0)
+# np.array_split(x, 3)
+print('np.array_split(x, 3) =\n', np.array_split(x, 3))
+
+x = np.arange(9)
+# np.array_split(x, 4)
+print('np.array_split(x, 4) =\n', np.array_split(x, 4))

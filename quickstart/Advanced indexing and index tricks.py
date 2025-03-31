@@ -48,5 +48,28 @@ image = np.array([[0, 1, 2, 0],  # each value corresponds to a color in the pale
 # the (2, 4, 3) color image
 print('palette[image] =\n', palette[image])
 
+# 4.1.3
+# the indexed array : a multidimensional array
+# the dimension of indexes : more than one dimension
+# the shape of an index : a bidimensional array
+print('# 4.1.3')
+print('# the indexed array : a multidimensional array')
+print('# the dimension of indexes : more than one dimension')
+print('# the shape of an index : a bidimensional array')
 
+# We can also give indexes for more than one dimension.
+# The arrays of indices for each dimension must have the same shape.
+a = np.arange(12).reshape(3, 4)
+print('a =\n', a)
+
+i = np.array([[0, 1],  # indices for the first dim of `a`
+              [1, 2]])
+j = np.array([[2, 1],  # indices for the second dim
+              [3, 3]])
+# a[i, j]  # i and j must have equal shape
+print('a[i, j] =\n', a[i, j])
+# a[i, 2]
+print('a[i, 2] =\n', a[i, 2])
+# a[:, j]
+print('a[:, j] =\n', a[:, j])
 

@@ -50,3 +50,24 @@ s[:] = -1  # s[:] is a view of s. Note the difference between s = 10 and s[:] = 
 print('s:\n', s)
 print('a:\n', a)
 
+
+# 3.3 Deep copy
+print('\n# 3.3 Deep copy')
+
+d = a.copy()  # a new array object with new data is created
+# d is a
+print('d is a:', d is a)
+# d.base is a  # d doesn't share anything with a
+print('d.base is a:', d.base is a)
+# d[0, 0] = 9999
+d[0, 0] = 9999
+print('a:\n', a)
+print('d:\n', d)
+
+i = int(1e8)
+print('i =', i)
+a = np.arange(i)
+print('a=', a)
+b = a[:100].copy()
+print('b=', b)
+del a  # the memory of ``a`` can be released.

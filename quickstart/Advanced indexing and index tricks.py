@@ -73,10 +73,24 @@ print('a[i, 2] =\n', a[i, 2])
 # a[:, j]
 print('a[:, j] =\n', a[:, j])
 
-# 4.1.4 tuple
-print('# 4.1.4 tuple')
+# 4.1.4 use tuple to index
+print('# 4.1.4 use tuple to index')
+
 # arr[i, j] is exactly the same as arr[(i, j)]
 l = (i, j)
 # equivalent to a[i, j]
 # a[l]
 print('a[l] =\n', a[l])
+
+# 4.1.5 a case that cannot do the indexing
+print('# 4.1.5 a case that cannot do the indexing')
+# We can not do this by putting i and j into an array,
+# because this array will be interpreted as indexing the first dimension of a.
+s = np.array([i, j])
+print('s =\n', s)
+# not what we want
+# a[s]
+# same as `a[i, j]`
+# a[tuple(s)]
+print('a[tuple(s)] =\n', a[tuple(s)])
+

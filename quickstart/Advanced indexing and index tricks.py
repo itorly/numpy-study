@@ -151,3 +151,10 @@ b  # `b` is a boolean with `a`'s shape
 a[b]  # 1d array with the selected elements
 # array([ 5,  6,  7,  8,  9, 10, 11])
 
+# 4.2.2 useful a[b] in assignments:
+a[b] = 0  # All elements of `a` higher than 4 become 0
+a
+# array([[0, 1, 2, 3],
+#        [4, 0, 0, 0],
+#        [0, 0, 0, 0]])
+

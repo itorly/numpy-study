@@ -121,3 +121,17 @@ data_max = data[ind, r]  # => data[ind[0], 0], data[ind[1], 1]...
 print('data_max =', data_max)
 # np.all(data_max == data.max(axis=0))
 print('np.all(data_max == data.max(axis=0)) =', np.all(data_max == data.max(axis=0)))
+
+# 4.1.7 use indexing with arrays as a target to assign to
+a = np.arange(5)
+# array([0, 1, 2, 3, 4])
+a[[1, 3, 4]] = 0
+# array([0, 0, 2, 0, 0])
+
+a = np.arange(5)
+a[[0, 0, 2]] = [1, 2, 3]
+# array([2, 1, 3, 3, 4])
+
+a = np.arange(5)
+a[[0, 0, 2]] += 1
+# array([1, 1, 3, 3, 4])

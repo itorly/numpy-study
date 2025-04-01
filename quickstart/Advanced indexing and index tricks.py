@@ -73,3 +73,10 @@ print('a[i, 2] =\n', a[i, 2])
 # a[:, j]
 print('a[:, j] =\n', a[:, j])
 
+# 4.1.4 tuple
+print('# 4.1.4 tuple')
+# arr[i, j] is exactly the same as arr[(i, j)]
+l = (i, j)
+# equivalent to a[i, j]
+# a[l]
+print('a[l] =\n', a[l])

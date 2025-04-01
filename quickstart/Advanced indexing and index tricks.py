@@ -94,3 +94,30 @@ print('s =\n', s)
 # a[tuple(s)]
 print('a[tuple(s)] =\n', a[tuple(s)])
 
+# 4.1.6 the search of the maximum value of time-dependent series
+print('\n# 4.1.6 the search of the maximum value of time-dependent series')
+
+time = np.linspace(20, 145, 5)  # time scale
+data = np.sin(np.arange(20)).reshape(5, 4)  # 4 time-dependent series
+# time
+print('time =', time)
+# data
+print('data =\n', data)
+# index of the maxima for each series
+ind = data.argmax(axis=0)
+# ind
+print('ind =', ind)
+# times corresponding to the maxima
+time_max = time[ind]
+print('time_max =', time_max)
+
+shape_0 = data.shape[0]
+shape_1 = data.shape[1]
+
+r = range(shape_1)
+
+data_max = data[ind, r]  # => data[ind[0], 0], data[ind[1], 1]...
+# data_max
+print('data_max =', data_max)
+# np.all(data_max == data.max(axis=0))
+print('np.all(data_max == data.max(axis=0)) =', np.all(data_max == data.max(axis=0)))

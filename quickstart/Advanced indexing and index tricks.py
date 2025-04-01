@@ -135,3 +135,19 @@ a[[0, 0, 2]] = [1, 2, 3]
 a = np.arange(5)
 a[[0, 0, 2]] += 1
 # array([1, 1, 3, 3, 4])
+
+# 4.2 Indexing with boolean arrays
+print('\n# 4.2 Indexing with boolean arrays')
+
+# 4.2.1 use boolean arrays that have the same shape as the original array
+a = np.arange(12).reshape(3, 4)
+
+b = a > 4
+b  # `b` is a boolean with `a`'s shape
+# array([[False, False, False, False],
+#        [False,  True,  True,  True],
+#        [ True,  True,  True,  True]])
+
+a[b]  # 1d array with the selected elements
+# array([ 5,  6,  7,  8,  9, 10, 11])
+

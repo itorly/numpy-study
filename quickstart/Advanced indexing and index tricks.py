@@ -160,6 +160,8 @@ a
 
 # 4.2.3 example: mandelbrot
 print('# 4.2.3 example: mandelbrot')
+# PyCharm-Specific Fix,
+# File → Settings → Tools → Python Plots → Uncheck "Show plots in tool window"
 import numpy as np
 import matplotlib.pyplot as plt
 

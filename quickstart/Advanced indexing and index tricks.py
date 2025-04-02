@@ -161,7 +161,7 @@ a
 # 4.2.3 example: mandelbrot
 print('# 4.2.3 example: mandelbrot')
 # PyCharm-Specific Fix,
-# File → Settings → Tools → Python Plots → Uncheck "Show plots in tool window"
+# File → Settings → Tools → Python Plot → Uncheck "Show plots in tool window"
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -186,7 +186,6 @@ def mandelbrot(h, w, maxit=20, r=2):
 
 
 plt.clf()
-plt.imshow(mandelbrot(400, 400, 20, 2))
+plt.imshow(mandelbrot(400, 400, 160, 2))
 plt.show()  # This line is crucial to display the plot
-# plt.savefig('mandelbrot.png')
-
+# plt.savefig('mandelbrot_160.png')

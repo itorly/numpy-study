@@ -14,3 +14,21 @@ grid = np.ix_(a, b)
 
 print(grid)
 
+# eg 2.How does it work?
+print("\n# 2.How does it work?")
+# Create a 4x5 array
+a = np.arange(20).reshape(4, 5)
+print("Original array:")
+print(a)
+
+# Select specific rows and columns
+rows = np.array([0, 2, 3])
+cols = np.array([1, 2, 4])
+
+# Use ix_ to create indexing arrays
+indices = np.ix_(rows, cols)
+result = a[indices]
+
+print("\nSelected sub-array:")
+print(result)
+

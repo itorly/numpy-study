@@ -187,7 +187,7 @@ def mandelbrot(h, w, maxit=20, r=2):
 
 plt.clf()
 plt.imshow(mandelbrot(400, 400, 160, 2))
-plt.show()  # This line is crucial to display the plot
+# plt.show()  # This line is crucial to display the plot
 # plt.savefig('mandelbrot_160.png')
 
 # 4.2.4 1D boolean array selecting the slices
@@ -227,3 +227,15 @@ result
 
 result[3, 2, 4]
 a[3] + b[2] * c[4]
+
+# 4.3.2 ufunc_reduce
+def ufunc_reduce(ufct, *vectors):
+   vs = np.ix_(*vectors)
+   r = ufct.identity
+   for v in vs:
+       r = ufct(r, v)
+   return r
+
+reduce = ufunc_reduce(np.add, a, b, c)
+print('reduce =\n', reduce)
+

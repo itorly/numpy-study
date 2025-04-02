@@ -161,7 +161,7 @@ a
 # 4.2.3 example: mandelbrot
 print('# 4.2.3 example: mandelbrot')
 # PyCharm-Specific Fix,
-# File → Settings → Tools → Python Plot → Uncheck "Show plots in tool window"
+# File → Settings → Tools → Python Plots → Uncheck "Show plots in tool window"
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -203,3 +203,27 @@ a[:, b2]                                   # selecting columns
 print('a[:, b2] =\n', a[:, b2])
 a[b1, b2]                                  # a weird thing to do
 print('a[b1, b2] =\n', a[b1, b2])
+
+
+# 4.3 The ix_() function
+print('\n# 4.3 The ix_() function')
+# The ix_ function can be used to combine different vectors
+# so as to obtain the result for each n-uplet.
+
+# 4.3.1 return value
+# compute all the a+b*c for all the triplets taken from each of the vectors a, b and c:
+a = np.array([2, 3, 4, 5])
+b = np.array([8, 5, 4])
+c = np.array([5, 4, 6, 8, 3])
+# return value
+ax, bx, cx = np.ix_(a, b, c)
+ax
+bx
+cx
+ax.shape, bx.shape, cx.shape
+
+result = ax + bx * cx
+result
+
+result[3, 2, 4]
+a[3] + b[2] * c[4]

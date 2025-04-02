@@ -189,3 +189,17 @@ plt.clf()
 plt.imshow(mandelbrot(400, 400, 160, 2))
 plt.show()  # This line is crucial to display the plot
 # plt.savefig('mandelbrot_160.png')
+
+# 4.2.4 1D boolean array selecting the slices
+a = np.arange(12).reshape(3, 4)
+b1 = np.array([False, True, True])         # first dim selection
+b2 = np.array([True, False, True, False])  # second dim selection
+
+a[b1, :]                                   # selecting rows
+a[b1]                                      # same thing
+print('a[b1, :] =\n', a[b1, :])
+print('a[b1] =\n', a[b1])
+a[:, b2]                                   # selecting columns
+print('a[:, b2] =\n', a[:, b2])
+a[b1, b2]                                  # a weird thing to do
+print('a[b1, b2] =\n', a[b1, b2])

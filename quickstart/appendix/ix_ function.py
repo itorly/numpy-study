@@ -32,3 +32,13 @@ result = a[indices]
 print("\nSelected sub-array:")
 print(result)
 
+# eg 3.Behavior in 3D
+print("\n# 3.Behavior in 3D")
+
+b = np.arange(24).reshape(2, 3, 4)
+print("Original array:")
+print(b)
+
+sub_b = b[np.ix_([0], [1, 2], [0, 3])]  # Shape: (1, 2, 2)
+print("\nSelected sub-array:")
+print(sub_b)

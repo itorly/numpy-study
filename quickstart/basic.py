@@ -15,7 +15,7 @@ print('a.shape =', a.shape)
 print('a.ndim =', a.ndim)
 
 # Print the data type of the elements in the array 'a'
-print('a.dtype =', a.dtype.name)
+print('a.dtype.name =', a.dtype.name)
 
 # Print the size in bytes of each element in the array 'a'
 print('a.dtype.itemsize =', a.itemsize)
@@ -259,6 +259,12 @@ print('b[-1] =',  b[-1])
 # x[..., 3] to x[:, :, :, :, 3] and
 #
 # x[4, ..., 5, :] to x[4, :, :, 5, :].
+
+# The counting sequence for multiple axes is from the outside to the inside,
+# from the smallest to the largest, starting from 0.
+# Axis 0: 2 elements (outermost dimension, "blocks")
+# Axis 1: 2 elements (rows in each block)
+# Axis 2: 3 elements (columns in each row)
 c = np.array([[[  0,  1,  2],  # a 3D array (two stacked 2D arrays)
                [ 10, 12, 13]],
               [[100, 101, 102],
@@ -268,7 +274,12 @@ print('c.shape =', c.shape)
 # c[1, ...]  # same as c[1, :, :] or c[1]
 print('c[1, ...] =\n', c[1, ...])
 # c[..., 2]  # same as c[:, :, 2]
+
+# : for axis 0 (select all elements along axis 0)
+# : for axis 1 (select all elements along axis 1)
+# 2 for axis 2 (select only the element at index 2 along axis 2)
 print('c[..., 2] =\n', c[..., 2])
+
 
 # However, if one wants to perform an operation on each element in the array, one can use the flat attribute which is an iterator over all the elements of the array
 print('an iterator over all the elements of the array')

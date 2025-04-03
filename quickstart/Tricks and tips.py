@@ -39,5 +39,5 @@ plt.hist(v, bins=50, density=True)       # matplotlib version (plot)
 # Compute the histogram with numpy and then plot it
 (n, bins) = np.histogram(v, bins=50, density=True)  # NumPy version (no plot)
 plt.plot(.5 * (bins[1:] + bins[:-1]), n)
-plt.show()
-plt.savefig('histogram')
+# plt.show()
+plt.savefig('histogram.png')

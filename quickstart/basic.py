@@ -278,8 +278,13 @@ print('c[1, ...] =\n', c[1, ...])
 # : for axis 0 (select all elements along axis 0)
 # : for axis 1 (select all elements along axis 1)
 # 2 for axis 2 (select only the element at index 2 along axis 2)
+# Integer indexing (like 2) on an axis removes that axis from the output.
 print('c[..., 2] =\n', c[..., 2])
 
+# The differences in shape caused by integer indexing and slice indexing
+# c[..., 2:3] # same as c[:, :, 2:3]
+# Slice indexing (like 2:3) on an axis preserves that axis (even if its length is 1).
+print('c[..., 2:3] =\n', c[..., 2:3])
 
 # However, if one wants to perform an operation on each element in the array, one can use the flat attribute which is an iterator over all the elements of the array
 print('an iterator over all the elements of the array')
